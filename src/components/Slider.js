@@ -27,7 +27,13 @@ const Slider = () => {
     <div className={styles.slider}>
       <div className={styles.slides}>
         {imageUrls.map((slide, index) => {
-          return (<div className={`${styles.slide} ${activeSlide === index ? styles.active : ''}`} key={index}>
+          return (
+            <div
+              className={
+                `${styles.slide} ${activeSlide === index ? styles.active : ''}${activeSlide + 1 === index ? styles.next : ''}${activeSlide - 1 === index ? styles.prev : ''}`
+              }
+              key={index}
+            >
             <img src={slide.image} alt="slide" />
           </div>)
         })}
