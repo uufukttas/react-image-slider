@@ -30,7 +30,13 @@ const Slider = () => {
           return (
             <div
               className={
-                `${styles.slide} ${activeSlide === index ? styles.active : ''}${activeSlide + 1 === index ? styles.next : ''}${activeSlide - 1 === index ? styles.prev : ''}`
+                `${styles.slide}
+                ${activeSlide === index ? styles.active : ''}
+                ${activeSlide + 1 === index ? styles.next : ''}
+                ${activeSlide - 1 === index ? styles.prev : ''}
+                ${activeSlide === 0 && index === totalSlides - 1 ? styles.prev : ''}
+                ${activeSlide === totalSlides - 1 && index === 0 ? styles.next : ''}`
+
               }
               key={index}
             >
