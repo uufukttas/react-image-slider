@@ -2,6 +2,8 @@
 
 This project is a simple image slider that allows users to create a slider using provided image URLs or file paths.
 
+You can see the [DEMO](uufukttas-image-slider.netlify.app).
+
 ## Getting Started
 
 After downloading the project and installing dependencies, follow the steps below.
